@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homePageFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_new"
+        android:title=""/>
+    <item
+        android:id="@+id/claimFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_refund"
+        android:title=""/>
+    <item
+        android:id="@+id/attandanceFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar"
+        android:title=""/>
+    <item
+        android:id="@+id/profileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_user_profile"
+        android:title=""/>
+
+    <item
+        android:id="@+id/page_5"
+        android:enabled="true"
+        android:icon="@drawable/ic_receipt_new"
+        android:title="news"/>
+</menu>

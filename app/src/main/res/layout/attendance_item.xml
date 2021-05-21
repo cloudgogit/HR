@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:outlineAmbientShadowColor="@color/light_color"
+    tools:context=".menu.ui.home.EmployeeFragment">
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:id="@+id/emp_id_edit"
+
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image_attendance"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+android:src="@drawable/flag_albania"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorAccent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/attandance_status_lay"
+                    android:layout_width="55dp"
+                    android:layout_height="70dp"
+                    android:background="@color/colorAccent"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/emp_attendance_status"
+                        android:textColor="@color/white"
+                        android:text="P"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+
+                        android:textSize="20dp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emp_name_attendance"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:text="awdnsnad"
+                android:tooltipText="@string/action_settings"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emp_working_hours"
+                android:textColor="@color/attance_a"
+                android:textSize="16dp"
+                android:text="awdnsnad"
+                android:tooltipText="@string/action_settings"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+                <ImageView
+                    android:id="@+id/info_time"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_information"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emp_dept_attendance"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+
+                    android:layout_toRightOf="@+id/info_time"
+                    android:textColor="@color/light_color"
+                    android:text="@string/action_settings"
+                    android:textSize="12dp"
+                    />
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

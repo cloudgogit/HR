@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.hrui.editproof.EditEmployeeProffFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/back_lay"
+                android:layout_height="200dp"
+                android:background="@drawable/background"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp">
+
+                    <ImageView
+                        android:id="@+id/add_user_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/ic_add_user"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/add_user_img"
+                        android:text="Add New Employee"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/menu_back_edit_proof"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_menu" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-3dp"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:orientation="vertical">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nested_scrollview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/bottom_lay"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/border"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingTop="10dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:gravity="center_vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical"
+                                            android:padding="10dp">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/lay_heading"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:text="RELATED ACCOUNT"
+                                                android:textAllCaps="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="20dp" />
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/epfno"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Employee PF number"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_epfno_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/dob"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Employee PF table"
+                                                android:textColorHint="#bcbcbc"
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                >
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/edit_epf_table"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:focusable="false"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/socso_icno"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="socso icno"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_socso_icno_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/socso_table"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="socso table"
+                                                android:textColorHint="#bcbcbc"
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                android:padding="5dp">
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/et_socso_table_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+
+
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/eis_table"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="ESI table"
+                                                android:textColorHint="#bcbcbc"
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                android:padding="5dp">
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/et_eis_table_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+
+
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/incometax_no"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Income Tax Filling No"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterbox"
+                                                android:padding="5dp">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_incometax_no_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/pcb_table"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Pcb Table"
+                                                android:textColorHint="#bcbcbc"
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                android:padding="5dp">
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/et_pcb_table_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+
+
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/bank_name"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:hint="Bank Name"
+                                                android:textColorHint="#bcbcbc"
+
+                                                android:padding="5dp">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/ed_bank_name_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/bank_branch"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Bank Branch"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:textColorHint="#bcbcbc"
+
+                                                android:padding="5dp">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/ed_bank_branch_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/bank_acno"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Bank Account"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:textColorHint="#bcbcbc"
+
+                                                android:padding="5dp">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/ed_bank_acno_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/employee_image"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Employee Image"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterbox"
+                                                android:padding="5dp">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_employee_image_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:focusable="false"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/dob_passport_image"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Passport Image"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterbox"
+                                                android:padding="5dp">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/ed_passport_image_edit"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:focusable="false"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="55dp"
+                                                android:layout_marginTop="30dp"
+                                                android:orientation="horizontal"
+                                                >
+
+                                                <LinearLayout
+                                                    android:id="@+id/backtoemp_edit"
+                                                    android:layout_width="0dp"
+                                                    android:layout_weight="1"
+                                                    android:padding="10dp"
+                                                    android:background="@color/colorAccent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal"
+                                                    >
+
+
+                                                    <androidx.appcompat.widget.AppCompatTextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:padding="10dp"
+                                                        android:textColor="@color/white"
+                                                        android:textStyle="bold"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center"
+                                                        android:text="Employment Details"/>
+                                                </LinearLayout>
+                                                <LinearLayout
+                                                    android:id="@+id/emp_submit_edit"
+                                                    android:layout_width="0dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@color/colorPrimary"
+                                                    android:layout_height="wrap_content"
+                                                    android:padding="10dp"
+                                                    android:orientation="horizontal"
+                                                    >
+                                                    <androidx.appcompat.widget.AppCompatTextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:padding="10dp"
+                                                        android:textColor="@color/white"
+                                                        android:textStyle="bold"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center"
+                                                        android:text="Submit"/>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

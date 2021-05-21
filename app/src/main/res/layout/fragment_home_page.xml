@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.hrui.homepage.HomePageFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_home"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/back_lay"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/background"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp">
+
+
+                    <ImageView
+                        android:id="@+id/group_user_img"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/ic_group"
+                        android:padding="5dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/group_user_img"
+                        android:text="Employees"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/menu_home"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_menu" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="-3dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nested_scrollview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/bottom_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_home"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="10dp">
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="10dp"
+                                                android:background="@color/white"
+                                                android:padding="10dp"
+                                                card_view:cardCornerRadius="10dp">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="@dimen/size_20"
+                                                    android:orientation="vertical">
+
+
+                                                    <androidx.appcompat.widget.AppCompatTextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Today Attendance"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="@dimen/size_16" />
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="10dp"
+                                                        android:orientation="horizontal">
+
+                                                        <ImageView
+                                                            android:layout_width="50dp"
+                                                            android:layout_height="50dp"
+                                                            android:layout_gravity="center"
+                                                            android:src="@drawable/chart_new" />
+
+                                                        <LinearLayout
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginLeft="50dp"
+                                                            android:orientation="vertical">
+
+                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                android:id="@+id/present"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:gravity="center"
+                                                                android:text="46"
+                                                                android:textColor="#4c5df8"
+                                                                android:textSize="25dp" />
+
+                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:gravity="center"
+                                                                android:text="Present"
+                                                                android:textColor="#cccbcb"
+                                                                android:textSize="@dimen/size_16" />
+                                                        </LinearLayout>
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="50dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginLeft="25dp"
+                                                            android:orientation="vertical">
+
+                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                android:id="@+id/late"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:gravity="center"
+                                                                android:text="46"
+
+                                                                android:textColor="#f5a92c"
+                                                                android:textSize="25dp" />
+
+                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:gravity="center"
+                                                                android:text="Late"
+                                                                android:textColor="#cccbcb"
+                                                                android:textSize="@dimen/size_16" />
+                                                        </LinearLayout>
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginLeft="25dp"
+                                                            android:orientation="vertical">
+
+                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                android:id="@+id/absent"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:gravity="center"
+                                                                android:text="4"
+
+                                                                android:textColor="#ff4000"
+                                                                android:textSize="25dp" />
+
+                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:gravity="center"
+                                                                android:text="Absent"
+                                                                android:textColor="#cccbcb"
+                                                                android:textSize="@dimen/size_16" />
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+
+                                                </LinearLayout>
+
+
+                                            </androidx.cardview.widget.CardView>
+
+
+                                            <!--Leave View-->
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="10dp"
+                                                android:background="@color/white"
+                                                android:padding="10dp"
+                                                android:id="@+id/leave_deatils"
+                                                card_view:cardCornerRadius="10dp">
+
+                                                <androidx.cardview.widget.CardView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginBottom="5dp"
+                                                    android:background="@color/white"
+                                                    android:padding="10dp"
+                                                    card_view:cardCornerRadius="10dp">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginBottom="5dp"
+                                                        android:background="@color/white"
+                                                        android:padding="10dp"
+                                                        card_view:cardCornerRadius="10dp">
+
+                                                        <androidx.cardview.widget.CardView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginBottom="5dp"
+                                                            android:background="@color/white"
+                                                            android:padding="10dp"
+                                                            card_view:cardCornerRadius="10dp">
+
+                                                            <androidx.cardview.widget.CardView
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginBottom="5dp"
+                                                                android:background="@color/white"
+                                                                android:padding="10dp"
+
+                                                                card_view:cardCornerRadius="10dp">
+
+                                                                <LinearLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_margin="@dimen/size_20"
+                                                                    android:orientation="vertical">
+
+
+                                                                    <androidx.appcompat.widget.AppCompatTextView
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:text="Leave Request"
+                                                                        android:textColor="@color/black"
+                                                                        android:textSize="@dimen/size_16" />
+
+
+                                                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:orientation="horizontal"
+
+
+                                                                        >
+
+
+                                                                        <LinearLayout
+                                                                            android:layout_width="0dp"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:layout_gravity="center"
+                                                                            android:layout_marginTop="10dp"
+                                                                            android:layout_weight="2"
+
+                                                                            android:orientation="vertical">
+
+                                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                                android:id="@+id/leave_emp_name"
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="Ramya Vasudevan"
+                                                                                android:textColor="#707894"
+                                                                                android:textSize="16dp" />
+
+                                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                                android:id="@+id/leave_type_dash"
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:layout_marginTop="5dp"
+                                                                                android:text="Annual Leave"
+                                                                                android:textColor="#8e94aa"
+                                                                                android:textSize="12dp" />
+
+                                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                                android:id="@+id/leave_date"
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:layout_marginTop="5dp"
+                                                                                android:paddingTop="5dp"
+                                                                                android:paddingBottom="5dp"
+                                                                                android:text="From 15 Mar to 17 Mar"
+                                                                                android:textColor="#8e94aa"
+                                                                                android:textSize="15dp" />
+                                                                        </LinearLayout>
+
+                                                                        <LinearLayout
+                                                                            android:layout_width="0dp"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:layout_gravity="center"
+                                                                            android:layout_marginLeft="5dp"
+                                                                            android:layout_weight="1"
+                                                                            android:orientation="horizontal">
+
+                                                                            <ImageView
+                                                                                android:id="@+id/leave_reject"
+                                                                                android:layout_width="35dp"
+                                                                                android:layout_height="35dp"
+                                                                                android:layout_gravity="center"
+                                                                                android:background="@drawable/ic_reject" />
+
+                                                                            <ImageView
+                                                                                android:id="@+id/leave_approve"
+
+                                                                                android:layout_width="50dp"
+                                                                                android:layout_height="50dp"
+                                                                                android:layout_gravity="center"
+                                                                                android:layout_marginLeft="10dp"
+                                                                                android:background="@drawable/ic_success" />
+
+                                                                        </LinearLayout>
+
+                                                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                                                                </LinearLayout>
+
+                                                            </androidx.cardview.widget.CardView>
+                                                        </androidx.cardview.widget.CardView>
+                                                    </androidx.cardview.widget.CardView>
+                                                </androidx.cardview.widget.CardView>
+                                            </androidx.cardview.widget.CardView>
+
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="10dp"
+                                                android:background="@color/white"
+                                                android:padding="10dp"
+                                                android:id="@+id/claim_deatils"
+                                                card_view:cardCornerRadius="10dp">
+
+                                                <androidx.cardview.widget.CardView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginBottom="5dp"
+                                                    android:background="@color/white"
+                                                    android:padding="10dp"
+                                                    card_view:cardCornerRadius="10dp">
+
+                                                    <androidx.cardview.widget.CardView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginBottom="5dp"
+                                                        android:background="@color/white"
+                                                        android:padding="10dp"
+                                                        card_view:cardCornerRadius="10dp">
+
+                                                        <androidx.cardview.widget.CardView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginBottom="5dp"
+                                                            android:background="@color/white"
+                                                            android:padding="10dp"
+                                                            card_view:cardCornerRadius="10dp">
+
+                                                            <androidx.cardview.widget.CardView
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginBottom="5dp"
+                                                                android:background="@color/white"
+                                                                android:padding="10dp"
+                                                                card_view:cardCornerRadius="10dp">
+
+                                                                <LinearLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_margin="@dimen/size_20"
+                                                                    android:orientation="vertical">
+
+
+                                                                    <androidx.appcompat.widget.AppCompatTextView
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:text="Claim Request"
+                                                                        android:textColor="@color/black"
+                                                                        android:textSize="@dimen/size_16" />
+
+
+                                                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:orientation="horizontal"
+
+
+                                                                        >
+
+
+                                                                        <LinearLayout
+                                                                            android:layout_width="0dp"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:layout_gravity="center"
+                                                                            android:layout_marginTop="10dp"
+                                                                            android:layout_weight="2"
+
+                                                                            android:orientation="vertical">
+
+                                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                                android:id="@+id/cliam_amount"
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:text="RM 1600"
+                                                                                android:textColor="#5c6bf8"
+                                                                                android:textSize="18dp"
+                                                                                android:textStyle="bold" />
+
+                                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                                android:id="@+id/claim_emp_name"
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:layout_marginTop="5dp"
+                                                                                android:text="Sankar "
+                                                                                android:textColor="#69728f"
+                                                                                android:textSize="16dp" />
+
+                                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                                android:id="@+id/claim_reason"
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:layout_marginTop="5dp"
+                                                                                android:paddingTop="5dp"
+                                                                                android:paddingBottom="5dp"
+                                                                                android:text="Business Trip"
+                                                                                android:textColor="#8e94aa"
+                                                                                android:textSize="15dp" />
+                                                                        </LinearLayout>
+
+                                                                        <LinearLayout
+                                                                            android:layout_width="0dp"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:layout_gravity="center"
+                                                                            android:layout_marginLeft="5dp"
+                                                                            android:layout_weight="1"
+                                                                            android:orientation="horizontal">
+
+                                                                            <ImageView
+                                                                                android:id="@+id/claim_reject"
+
+                                                                                android:layout_width="35dp"
+                                                                                android:layout_height="35dp"
+                                                                                android:layout_gravity="center"
+                                                                                android:background="@drawable/ic_reject" />
+
+                                                                            <ImageView
+                                                                                android:id="@+id/claim_approve"
+
+                                                                                android:layout_width="50dp"
+                                                                                android:layout_height="50dp"
+                                                                                android:layout_gravity="center"
+                                                                                android:layout_marginLeft="10dp"
+                                                                                android:background="@drawable/ic_success" />
+
+                                                                        </LinearLayout>
+
+                                                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                                                                </LinearLayout>
+
+                                                            </androidx.cardview.widget.CardView>
+                                                        </androidx.cardview.widget.CardView>
+                                                    </androidx.cardview.widget.CardView>
+                                                </androidx.cardview.widget.CardView>
+                                            </androidx.cardview.widget.CardView>
+
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="10dp"
+                                                android:background="@color/white"
+                                                android:padding="10dp"
+                                                card_view:cardCornerRadius="10dp">
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="@dimen/size_20"
+                                                    android:orientation="vertical">
+
+
+                                                    <androidx.appcompat.widget.AppCompatTextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Sign / off"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="@dimen/size_16" />
+
+
+                                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="horizontal"
+
+
+                                                        >
+
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginTop="10dp"
+                                                            android:layout_weight="2"
+
+                                                            android:orientation="vertical">
+
+                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                android:id="@+id/sign_hours"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="01:23 Hrs"
+                                                                android:textColor="#5c6bf8"
+                                                                android:textSize="20dp"
+                                                                android:textStyle="bold" />
+
+
+                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                android:id="@+id/no_of_days"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginTop="5dp"
+                                                                android:paddingTop="5dp"
+                                                                android:paddingBottom="5dp"
+                                                                android:text="sign in at 08:24 am"
+                                                                android:textColor="#8e94aa"
+                                                                android:textSize="15dp" />
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginLeft="5dp"
+                                                            android:layout_weight="1"
+                                                            android:id="@+id/shift_in"
+                                                            android:background="@drawable/button_gradient"
+                                                            android:gravity="center"
+                                                            android:orientation="horizontal">
+
+                                                            <androidx.appcompat.widget.AppCompatTextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+
+android:id="@+id/txt_sift"
+                                                                android:gravity="center"
+                                                                android:padding="10dp"
+                                                                android:text="SIGN OFF"
+                                                                android:textColor="@color/white"
+                                                                android:textSize="15dp" />
+                                                        </LinearLayout>
+
+                                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                                                </LinearLayout>
+
+                                            </androidx.cardview.widget.CardView>
+
+                                        </LinearLayout>
+
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

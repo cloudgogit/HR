@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootlay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/back_lay"
+                android:layout_height="150dp"
+                android:background="@drawable/background"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp">
+
+                    <ImageView
+                        android:id="@+id/add_user_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/ic_add_user"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/add_user_img"
+                        android:text="Add New Employee"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/menu_click"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_menu" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-3dp"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:orientation="vertical">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nested_scrollview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/bottom_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingTop="10dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical"
+                                            android:padding="10dp">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/lay_heading"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:text="Personal information"
+                                                android:textAllCaps="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="20dp" />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emp_name"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Employee Name"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_emp_name"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/dob_emp_register"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Date Of Birth"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterbox"
+                                                android:padding="5dp">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/ed_dob"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:focusable="false"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emp_ico"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="ICNO"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_ico"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/tilgender"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Gender"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                android:padding="5dp">
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/et_gender"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emp_email_id"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Email id"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_email_id"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/tilrace"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Race"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                android:padding="5dp">
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/et_race"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emp_religion"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Religion"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_religion"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emp_current_address"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Current Address"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_current_address"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emp_ic_address"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="IC Address"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_ic_address"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/tilphysical_challenge"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Physical Challenge"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                android:padding="5dp">
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/et_physical_challenge"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emp_passportno"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Passport no"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_passportno"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/passport_issuedate"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Passport Issue Date"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterbox"
+                                                android:padding="5dp">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/ed_passport_issuedate"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:focusable="false"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/passport_expiredate"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Passport Expire Date"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterbox"
+                                                android:padding="5dp">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/ed_passport_expiredate"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:focusable="false"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/marital_status"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Marital Status"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                android:padding="5dp">
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/et_marital_status"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/spouse_name"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Spouse Name"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_spouse_name"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/spouse_icno"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Spouse ICNO"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_spouse_icno"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/spouse_employement"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Spouse Employement"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                android:padding="5dp">
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/et_spouse_employement"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/children"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Children"
+                                                android:textColorHint="#bcbcbc"
+
+                                                style="@style/InputLayoutOuterwithdropdown"
+                                                android:padding="5dp">
+
+                                                <AutoCompleteTextView
+                                                    android:id="@+id/et_children"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:backgroundTint="@color/colorAccent"
+                                                    android:inputType="text" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emergency_name"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Emergency Name"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_emergency_name"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emergency_contactno"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Emergency Contactno"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_emergency_contactno"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:id="@+id/emergency_relationship"
+                                                style="@style/InputLayoutOuterbox"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:hint="Emergency Relationship"
+                                                android:textColorHint="#bcbcbc">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/et_emergency_relationship"
+                                                    style="@style/ProfileEditText"
+                                                    android:layout_width="match_parent"
+                                                    android:inputType="text"
+                                                    android:textColor="@color/black" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0.5dp"
+                                                android:background="#bcbcbc"
+
+                                                />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:orientation="horizontal"
+
+                                                >
+
+                                                <RadioGroup
+                                                    android:id="@+id/edit_radio_group"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_above="@+id/view_below"
+
+                                                    android:orientation="horizontal">
+
+                                                    <RadioButton
+                                                        android:id="@+id/need_access_edit"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_weight="1"
+
+                                                        android:text="Need HR Access"
+                                                        android:textSize="@dimen/size_15" />
+
+                                                    <RadioButton
+                                                        android:id="@+id/no_need_edit"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_weight="1"
+                                                        android:text="No Need"
+                                                        android:checked="true"
+                                                        android:textSize="@dimen/size_15" />
+
+                                                </RadioGroup>
+
+
+                                            </LinearLayout>
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="30dp"
+                                                android:layout_marginBottom="55dp"
+                                                android:orientation="horizontal">
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:orientation="horizontal"
+                                                    android:padding="5dp"
+                                                    android:visibility="invisible">
+
+
+                                                    <androidx.appcompat.widget.AppCompatTextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:padding="5dp"
+                                                        android:text="HI" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/emp_next"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:background="@color/colorPrimary"
+                                                    android:orientation="horizontal"
+                                                    android:padding="10dp">
+
+                                                    <androidx.appcompat.widget.AppCompatTextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:gravity="center"
+                                                        android:padding="10dp"
+                                                        android:text="Employeement Details"
+                                                        android:textColor="@color/white"
+                                                        android:textStyle="bold" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

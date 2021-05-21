@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homePageFragment">
+
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.hr.menu.ui.home.EmployeeFragment"
+        android:label="Employee List"
+        tools:layout="@layout/fragment_gallery" />
+
+
+    <fragment
+        android:id="@+id/addNewEmployeePersonal2"
+        android:name="com.hr.menu.hrui.AddNewEmployeePersonal"
+        android:label="AddNewEmployeePersonal" />
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.hr.menu.ui.gallery.LeaveRequestListFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addEmployeeDetailsFragment2"
+        android:name="com.hr.menu.hrui.employeedetails.AddEmployeeDetailsFragment"
+        android:label="AddEmployeeDetailsFragment" />
+    <fragment
+        android:id="@+id/employeeProfFragment2"
+        android:name="com.hr.menu.hrui.proof.EmployeeProfFragment"
+        android:label="fragment_employee_prof"
+        tools:layout="@layout/fragment_employee_prof" />
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.hr.menu.hrui.homepage.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" />
+    <fragment
+        android:id="@+id/editEmployeePersonalFragment"
+        android:name="com.hr.menu.hrui.employeepersonal.EditEmployeePersonalFragment"
+        android:label="EditEmployeePersonalFragment" />
+    <fragment
+        android:id="@+id/claimFragment"
+        android:name="com.hr.menu.hrui.claim.ClaimFragment"
+        android:label="fragment_claim"
+        tools:layout="@layout/fragment_claim" />
+    <fragment
+        android:id="@+id/cliamDetailsFragment"
+        android:name="com.hr.menu.hrui.cliamDetails.CliamDetailsFragment"
+        android:label="fragment_cliam_details"
+        tools:layout="@layout/fragment_cliam_details" />
+    <fragment
+        android:id="@+id/editEmployeeProffFragment"
+        android:name="com.hr.menu.hrui.editproof.EditEmployeeProffFragment"
+        android:label="fragment_edit_employee_proff"
+        tools:layout="@layout/fragment_edit_employee_proff" />
+    <fragment
+        android:id="@+id/attandanceFragment"
+        android:name="com.hr.menu.hrui.attandance.AttandanceFragment"
+        android:label="fragment_attandance"
+        tools:layout="@layout/fragment_attandance" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.hr.menu.hrui.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+
+</navigation>
