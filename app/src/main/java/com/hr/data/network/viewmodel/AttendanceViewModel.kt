@@ -21,6 +21,8 @@ import com.hr.data.network.api.response.ResponseUserLogin
 import com.hr.data.network.repository.AttendanceRespository
 import com.hr.data.network.repository.ClaimRespository
 import com.hr.data.network.repository.UserLoginRespository
+import com.hr.data.network.api.response.ResponseAttendanceDetails
+
 
 import kotlinx.coroutines.launch
 

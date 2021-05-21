@@ -1,5 +1,6 @@
 package com.hr.menu.hrui.attandance
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -53,6 +54,7 @@ class AttandanceFragment : Fragment(), LifecycleObserver, DatePickerDialog.OnDat
 
     }
 
+    @SuppressLint("NewApi")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -131,7 +133,7 @@ class AttandanceFragment : Fragment(), LifecycleObserver, DatePickerDialog.OnDat
             id = _category.id.toString(),
             date = formattedDate
         ), {
-                println("id_of_value"+ " "+it.msg )
+
         }, {
             Toast.makeText(requireContext(), it, Toast.LENGTH_LONG).show()
         })
